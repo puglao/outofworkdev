@@ -6,6 +6,7 @@
       "name": "outofworkdev",
       "dependencies": {
         "@elysiajs/html": "^1.4.0",
+        "@elysiajs/openapi": "^1.4.12",
         "@elysiajs/static": "^1.4.7",
         "elysia": "latest",
       },
@@ -18,6 +19,8 @@
     "@borewit/text-codec": ["@borewit/text-codec@0.1.1", "", {}, "sha512-5L/uBxmjaCIX5h8Z+uu+kA9BQLkc/Wl06UGR5ajNRxu+/XjonB5i8JpgFMrPj3LXTCPA0pv8yxUvbUi+QthGGA=="],
 
     "@elysiajs/html": ["@elysiajs/html@1.4.0", "", { "dependencies": { "@kitajs/html": "^4.1.0", "@kitajs/ts-html-plugin": "^4.0.1" }, "peerDependencies": { "elysia": ">= 1.4.0" } }, "sha512-j4jFqGEkIC8Rg2XiTOujb9s0WLnz1dnY/4uqczyCdOVruDeJtGP+6+GvF0A76SxEvltn8UR1yCUnRdLqRi3vuw=="],
+
+    "@elysiajs/openapi": ["@elysiajs/openapi@1.4.12", "", { "peerDependencies": { "elysia": ">= 1.4.0" } }, "sha512-FhmWqUFDOidD2tUR0mrLnD2M0OUFF6cFUfKtHkQDbnAmCihFusxs7JvtUJjmEKZ++mzNvYLpbhZeJIXA7tIzLA=="],
 
     "@elysiajs/static": ["@elysiajs/static@1.4.7", "", { "peerDependencies": { "elysia": ">= 1.4.0" } }, "sha512-Go4kIXZ0G3iWfkAld07HmLglqIDMVXdyRKBQK/sVEjtpDdjHNb+rUIje73aDTWpZYg4PEVHUpi9v4AlNEwrQug=="],
 
