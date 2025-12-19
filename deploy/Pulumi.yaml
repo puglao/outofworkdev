@@ -1,0 +1,10 @@
+name: outofworkdev
+description: infrastucture of outofworkdev
+runtime:
+  name: nodejs
+  options:
+    packagemanager: bun
+config:
+  pulumi:tags:
+    value:
+      pulumi:template: typescript
