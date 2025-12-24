@@ -14,7 +14,10 @@
 		"vscode": {
 			"settings": {
 				"terminal.integrated.defaultProfile.linux": "zsh"
-			}
+			},
+			"extensions": [
+				"ms-ossdata.vscode-pgsql"
+			]
 		}
 	},
 	"postCreateCommand": "mise install -q || mise install -q"
