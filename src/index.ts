@@ -1,17 +1,17 @@
 import { Elysia } from "elysia";
-import { staticPlugin } from "@elysiajs/static";
-import { html } from "@elysiajs/html";
+import { opentelemetry } from '@elysiajs/opentelemetry';
+import { logger } from "@bogeychan/elysia-logger";
 
 import { apiRoutes } from "./routes/api";
-import { htmxRoutes } from "./routes/htmx";
+import { webRoutes } from "./routes/web";
 
 const app = new Elysia({ detail: { hide: true } })
+  .use(logger({ level: "info" }))
+  .use(opentelemetry())
   .use(apiRoutes)
-  .use(html())
-  .use(staticPlugin())
-  .use(htmxRoutes)
+  .use(webRoutes)
   .listen(3000);
 
 console.log(
-  `🦊 Elysia is running at ${app.server?.hostname}:${app.server?.port}`
+  `🦊 Elysia is running at ${app.server?.protocol}://${app.server?.hostname}:${app.server?.port}`
 );

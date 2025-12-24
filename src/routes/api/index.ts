@@ -1,17 +1,13 @@
 import { Elysia } from "elysia";
 import { healthzRoute } from "./healthz";
-import { openapi } from '@elysiajs/openapi';
+import { usersRoute } from "./users";
+import { openapi, fromTypes } from '@elysiajs/openapi';
 
 
 export const apiRoutes = new Elysia({ prefix: "/api", detail: { hide: false } })
     .use(openapi({
-        exclude: {
-            paths: [
-
-                // exclude everything not under /api
-                /^\/(?!api\/).*/,
-            ]
-        }
+        references: fromTypes()
     }
     ))
-    .use(healthzRoute);
+    .use(healthzRoute)
+    .use(usersRoute);
