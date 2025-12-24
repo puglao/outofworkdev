@@ -1,13 +1,15 @@
 import { Html } from "@elysiajs/html";
 
 export const Layout = ({ children }: { children: JSX.Element }) => (
-  <html lang="en">
-    <head>
-      <meta charset="UTF-8" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <title>Knowledge Base</title>
-      <script src="https://unpkg.com/htmx.org@2.0.4"></script>
-      <script src="https://cdn.tailwindcss.com"></script>
+  <>
+    {'<!DOCTYPE html>'}
+    <html lang="en">
+      <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Knowledge Base</title>
+        <script src="https://unpkg.com/htmx.org@2.0.4"></script>
+        <script src="https://cdn.tailwindcss.com"></script>
       <script>{`
         tailwind.config = {
           darkMode: 'class',
@@ -36,11 +38,12 @@ export const Layout = ({ children }: { children: JSX.Element }) => (
           }
         })();
       `}</script>
-    </head>
-    <body class="bg-gray-50 dark:bg-gray-900 min-h-screen transition-colors">
-      <div class="container mx-auto px-4 py-8">
-        {children}
-      </div>
-    </body>
-  </html>
+      </head>
+      <body class="bg-gray-50 dark:bg-gray-900 min-h-screen transition-colors">
+        <div class="container mx-auto px-4 py-8">
+          {children}
+        </div>
+      </body>
+    </html>
+  </>
 );
